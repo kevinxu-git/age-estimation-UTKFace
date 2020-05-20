@@ -1,4 +1,4 @@
-Student Project at ENSIIE 2018
+Student Project - ENSIIE 2018
 
 # The dataset
 
