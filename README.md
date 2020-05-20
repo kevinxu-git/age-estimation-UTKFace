@@ -1,5 +1,3 @@
-Student Project - ENSIIE 2018
-
 # The dataset
 
 The UTKFace dataset is a large scale face dataset. It contains over 20 000 face images. The images cover large variation in pose, facial expression, illumination, occlusion, resolution, etc.
@@ -18,7 +16,7 @@ In the problem, we will use about 10 000 face images.
 
 
 # Authors
-+ Project realized during the course of Advanced Programming, 3rd semester at ENSIIE in 2018.
++ Project realized during the course of Regularized Regressions, 3rd semester at ENSIIE in 2018.
 
 + **Kevin XU** - *Applied Mathematics Student ENSIIE* - [wenkai88](https://github.com/wenkai88)
 + **Ziheng LI** - *Applied Mathematics Student ENSIIE* - [zihengli](https://github.com/zihengli)
