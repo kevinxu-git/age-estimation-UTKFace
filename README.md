@@ -15,3 +15,10 @@ to UTKFace
 
 The aim of the problem is to estimate the age of a face from an image. We will construct a model from the variables provided. The target variable is age. The co-variable are gender, race and we also will include information about the images such as grayscale or RGB color intensity per pixel.
 In the problem, we will use about 10 000 face images.
+
+
+# Authors
++ Project realized during the course of Advanced Programming, 3rd semester at ENSIIE in 2018.
+
++ **Kevin XU** - *Applied Mathematics Student ENSIIE* - [wenkai88](https://github.com/wenkai88)
++ **Ziheng LI** - *Applied Mathematics Student ENSIIE* - [zihengli](https://github.com/zihengli)
