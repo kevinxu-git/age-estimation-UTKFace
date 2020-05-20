@@ -1,0 +1,51 @@
+---
+title: "M.R.R. Project 2018 - Methodology Report - UTKFace"
+author: "Binomial 8 - XU KEVIN - LI ZIHENG"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+In this project, the aim is to estimate the age of a face on an image. We need to compute a model able to perform this. The main difficulty is to cope with the huge amount of variables which are the pixels of an image.
+
+# Methodology selected
+
+  We have decided to construct a model based on the different parts of a person's face. We will compute for each part a model in order to predict the age using only one part. At the end, we will maybe take the mean of the ages estimated for each part.
+
+## Model 
+
+  The **linear model** can deal with the problem of facial expression changes and continuous occlusion. After searching on the Internet, we know that linear regression has a more accurate recognition ability for untreated faces, but is not available with the pictures which have occlusion, illumination or gestures. 
+  In this project, we decided to use a simple but efficient linear model to predict the age from an image. Samples from a certain object class are known to lie on a linear space. We use this concept to develop class-specific models of the face's images simply by using the smaller part of the faces, so we can define the task of age prediction (face recognition) as a problem of linear regression. 
+
+## Variables selection
+
+  Given that the number of variables is large, the stepwise regression is not adapted. Stepwise regression assumes that the predictor variables are not highly correlated.
+  If we compute the full model without penalization, it will result in large prediction intervals. In order to reduce the number of variables, we will perform a penalized regression. The number of variables is way more abundant than the number of samples (face images). Indeed, each pixel represents a variable. Then, it is crucial to reduce the amount of variables.
+  
+  LASSO's great strength is that it can estimate models in which $p$ >> $n$. Its models can be effective for prediction only when there is a handful of very powerful predictors. Since we aim to predict the age of a person from a image, we are not able to choose the $n$ most powerful predictors among all the pixels. 
+  
+  Hence, the Ridge regression may give better prediction since it uses all variables but with some variables reduced to zero. Ridge is generally good at prediction but tends to be less interpretable. Therefore, we will use the **Ridge regression** to penalize the coefficients.
+
+## Model validation
+
+  In order to test and validate our model, we will use a k-fold cross validation procedure. We will split our dataset into K folds.
+  We will follow the following procedure : A model will be computed using k-1 folds, then we will test our model on the remaining fold. This procedure will be repeated k times and the root mean squared error will be computed each time.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+

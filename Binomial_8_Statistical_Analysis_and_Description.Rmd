@@ -1,0 +1,66 @@
+---
+title: "M.R.R. Project 2018 - Statistical Analysis and Description - Binomial 8"
+output: 
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+```
+
+# Presentation of the data : UTKFace - Large Scale Face Dataset
+
+The UTKFace dataset is a large scale face dataset. It contains over 20 000 face images. The images cover large variation in pose, facial expression, illumination, occlusion, resolution, etc. 
+
+The information on the JPG images provided are : \newline
+- age : an interger between 0 and 116 \newline
+- gender : 0 (male) or 1 (female) \newline
+- race : an integer from 0 to 4, denoting White, Black, Asian, Indian, and Others (like Hispanic, Latino, Middle Eastern) \newline
+- date & time: is in the format of yyyymmddHHMMSSFFF, showing the date and time an image was collected to UTKFace
+```{r, eval=TRUE, echo=FALSE, results="markup",fig.align = "center"}
+data <- read.table("./data/data.txt", sep=",", header = TRUE)
+data <- data[-ncol(data)]
+n <- dim(data)[1]
+```
+
+# The general nature of the problem
+The aim of the problem is to estimate the age of a face from an image. We will construct a model from the variables provided. The target variable is $\texttt{age}$. The co-variable are $\texttt{gender}$, $\texttt{race}$ and we also will include information about the images such as grayscale or RGB color intensity per pixel. \newline
+In the problem, we will use about 10 000 face images.
+
+# Quick analysis of the target variable and its links to explanatory variables
+
+The data is made up of 9778 face images.
+
+```{r, eval=TRUE, echo=FALSE, results="markup", fig.height = 3, fig.width = 5, fig.align = "center"}
+library(corrplot)
+C <- cor(data)
+corrplot.mixed(C, lower = "circle", upper = "number")
+```
+The correlation matrix shows that the $\texttt{age}$ variable is more correlated to the $\texttt{race}$ variable than the $\texttt{gender}$ variable.
+
+```{r, eval=TRUE, echo=FALSE, results="markup", fig.height = 3, fig.width = 5, fig.align = "center"}
+hist(data$gender, main = "Histogram of gender variable", col="blue", xlab = "gender")
+```
+
+We can notice that there are slighty more women than men in the images.
+
+```{r, eval=TRUE, echo=FALSE, results="markup", fig.height = 3, fig.width = 5, fig.align = "center"}
+hist(data$race, main = "Histogram of race variable", col="blue", xlab = "race")
+```
+
+From this histogram, we can know that we have almost 50% of the sample are white people , but much less in black. That means we will have a more precise result in the recognition of white people.
+
+
+```{r, eval=TRUE, echo=FALSE, results="markup", fig.height = 3, fig.width = 5, fig.align = "center"}
+hist(data$age, main = "Histogram of age variable", col="blue", xlab = "age")
+```
+
+There are more young people than aged people. It will affect the model that we will compute.
+
+
+
+
+
+
