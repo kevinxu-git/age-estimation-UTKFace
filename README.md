@@ -1,3 +1,5 @@
+Student Project at ENSIIE 2018
+
 # The dataset
 
 The UTKFace dataset is a large scale face dataset. It contains over 20 000 face images. The images cover large variation in pose, facial expression, illumination, occlusion, resolution, etc.
