@@ -1,4 +1,4 @@
-# The dataset
+# Age estimation from face images using regression methods
 
 The UTKFace dataset is a large scale face dataset. It contains over 20 000 face images. The images cover large variation in pose, facial expression, illumination, occlusion, resolution, etc.
 The information on the JPG images provided are :
