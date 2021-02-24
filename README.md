@@ -18,5 +18,5 @@ In the problem, we will use about 10 000 face images.
 # Authors
 + Project realized during the course of Regularized Regressions, 3rd semester at ENSIIE in 2018.
 
-+ **Kevin XU** - *Applied Mathematics Student ENSIIE* - [wenkai88](https://github.com/wenkai88)
++ **Kevin XU** - *Applied Mathematics Student ENSIIE* - [kevinxu-git](https://github.com/kevinxu-git)
 + **Ziheng LI** - *Applied Mathematics Student ENSIIE* - [zihengli](https://github.com/zihengli)
